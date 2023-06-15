@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "123456789", "app");
+$con = mysqli_connect("localhost", "root", "12345678", "app");
 
 echo $id = $_POST["id"];
 echo $product_name = $_POST["product_name"];
