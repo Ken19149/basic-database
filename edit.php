@@ -3,7 +3,7 @@
 $id = $_GET["id"];
 $con = mysqli_connect("localhost", "root", "12345678", "app");
 
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM product WHERE id_product = $id";
 $query = mysqli_query($con, $sql);
 $data = mysqli_fetch_array($query);
 
