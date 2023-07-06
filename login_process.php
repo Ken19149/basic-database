@@ -1,6 +1,6 @@
 <?php  
 
-$con = mysqli_connect("localhost","root", "123456789", "app");
+$con = mysqli_connect("localhost","root", "12345678", "app");
 
 
 $user = $_POST['user'];
