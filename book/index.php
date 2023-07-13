@@ -4,7 +4,7 @@ $con = mysqli_connect("localhost", "root", "12345678", "midterm");
 $con->set_charset("utf8");
 //mysql_query($con, "INSERT INTO product VALUES(1, "pen", 150, 1)");
 
-$sql = "SELECT * FROM Chavangkon";
+$sql = "SELECT * FROM chavangkon";
 $query = mysqli_query($con, $sql);
 
 echo "<div class='container'>
@@ -13,8 +13,8 @@ echo "<div class='container'>
 <li class='list-group-item active'>Book List</li>";
 while ($data = mysqli_fetch_array($query)) {
     echo "<li class='list-group-item'>ID: ".$data["id_post"]." | Name: ".$data["book_name"]." | Author: ".$data["author"]." | Date: ".$data["date"]."
-    <a onclick='func_edit()' class='btn btn-warning' href='edit.php?id=".$data['id_post']."'> edit</a>
-    <a onclick='func_del()' class='btn btn-danger' href='delete.php?id=".$data['id_post']."'> delete</a>
+    <a class='btn btn-warning' href='edit.php?id=".$data['id_post']."'> edit</a>
+    <a class='btn btn-danger' href='delete.php?id=".$data['id_post']."'> delete</a>
     </li>";
 }
 echo "</ul></div>";
@@ -52,6 +52,7 @@ echo "</ul></div>";
 	<div class="container">
 	    <form action="add.php" method="post">
 	        <br>
+	        <input type="hidden" name="id" value="<?php echo $data['id_post'] ?>">
 	        Book Title: <input type="text" name="book_name" class="form-control"><br>
 	        Author: <input type="text" name="author" class="form-control"><br>
 	        Published Date: <input type="text" name="date" class="form-control"><br>
