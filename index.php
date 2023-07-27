@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "123456789", "app");
+$con = mysqli_connect("localhost", "root", "12345678", "app");
 //mysql_query($con, "INSERT INTO product VALUES(1, "pen", 150, 1)");
 
 $sql = "SELECT * FROM product";
@@ -57,7 +57,8 @@ echo "</ul></div>";
 	        Status: <input type="text" name="status" class="form-control"><br>
 	        <input type="submit" value="insert info" class="btn btn-primary">
 	        <!-- <input type="button" value="register" class="btn-blue" style="background-color: #0099ff;"> -->
-	        <a href="login.php" class="btn btn-success">register</a>
+	        <a href="login.php" class="btn btn-success">login</a>
+	        <a href="register.php" class="btn btn-success">register</a>
 	    </form>
 		
     </div>

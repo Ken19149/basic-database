@@ -13,7 +13,7 @@
 			<input type="text" name="user" class="form-control" placeholder="Username">
 			<input type="password" name="pass" class="form-control" placeholder="Password" style="margin-top:20px; margin-bottom: 20px; ">
 			<input type="submit" class="btn btn-primary" value="login">
-	    	<input type="submit" class="btn btn-success" style= "background-color: green;" value="register">
+	    	<a href="register.php" class="btn btn-success">register</a>
 		</div>
 	</form>
 </body>
